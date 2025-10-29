@@ -632,8 +632,8 @@ fieldset {
         outline: none;
 }
 
-img {
-    display: none;
+#orderForm img {
+  display: none;
 }
 
 /* רקע חצי שקוף */
@@ -679,4 +679,5 @@ img {
 }
 .popup button:hover {
     background-color: #14324B;
+
 }
