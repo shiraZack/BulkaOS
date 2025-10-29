@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="images/logoImage/monka.png">
+    <meta charset="utf-8" />
+    <title>בּוּלקָה - הזמנות</title>
+    <meta name="description" content="אתר המתכונים הרשמי של מונקה – מתכונים, טיפים ויצירת קשר." />
+    <meta name="keywords" content="מונקה, מתכונים, טיפים, צור קשר" />
+    <meta name="author" content="שירה, דניאל, אושר, ליאל">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <script src="jScripts/JavaScript.js" type="text/javascript">  </script>
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+    </style>
+
+</head>
+<body onload="activateBtn()">
+<header>
+    <nav aria-label="תפריט חיפוש ראשי" class="navbar">
+        <ul class="nav-left">
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="tips.html">טיפים</a></li>
+            <li class="dropdown">
+                <a href="#" class="notActive">מתכונים ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="sweetRecipes.html">מתוקים</a></li>
+                    <li><a href="#" class="notActive">מלוחים</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="images/logoImage/monka.png" alt="לוגו בולקה בייקרי"/>
+            </a>
+        </div>
+        <ul class="nav-right">
+            <li><a href="about.html">מי אנחנו</a></li>
+            <li><a href="#" class="notActive">הזמנות</a></li>
+            <li><a href="contactUs.html">דברו איתנו</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="headerDesign">
+    <h1>
+        הזמנות
+    </h1>
+</section>
+<nav class="breadCrumbs">
+    <ol>
+        <li><a href="index.html">דף הבית</a></li>
+        <li><a href="#">הזמנות</a></li>
+    </ol>
+</nav>
+<main>
+    <form id="orderForm">
+        <fieldset>
+            <h2>איך לקרוא לך?</h2>
+            <h3>שם פרטי</h3>
+                <input type="text" id="fName" class="name" placeholder="פלוני" oninput="activateBtn()"> <br/>
+            <h3>שם משפחה</h3>
+                <input type="text" id="lName" class="name" placeholder="אלמוני" oninput="activateBtn()">
+        </fieldset>
+        
+        <fieldset>
+            <h2>מתחשק לי משהו...</h2>
+            <label for="sweet">
+                <input type="radio" id="sweet" name="flavor" value="מתוק" onchange="pickFlavor()"> מתוק 
+            </label>
+                <label for="salty">
+                    <input type="radio" id="salty" name="flavor" value="מלוח" onchange="pickFlavor()"> מלוח 
+                </label>
+           
+        </fieldset>
+       
+        <div id="sweetForm" style="display: none">
+            <fieldset>
+                <h2>מאפה</h2>
+                <h3>ניתן לבחור מאפה אחד בכל הזמנה</h3>
+                <label for="croissant">
+                    <input type="radio" id="croissant" name="sweetPastry" value="קרואסון" onchange="pickChoice('Pastry')"> קרואסון 
+                </label>
+                <label for="eclair">
+                    <input type="radio" id="eclair" name="sweetPastry" value="אקלייר" onchange="pickChoice('Pastry')"> אקלייר 
+                </label>
+                <label for="donut">
+                    <input type="radio" id="donut" name="sweetPastry" value="דונאט" onchange="pickChoice('Pastry')"> דונאט 
+                </label>
+                <div id="pickSweetPastry">
+                    <img src="images/ordersImages/sweetPastryImages/croissant.png" class="sweetPastryImg" id="croissantImg"/>
+                    <img src="images/ordersImages/sweetPastryImages/donut.png" class="sweetPastryImg" id="donutImg"/>
+                    <img src="images/ordersImages/sweetPastryImages/eclair.png" class="sweetPastryImg" id="eclairImg"/>
+                </div>
+            </fieldset>
+          
+           <fieldset>
+               <h2>מילוי</h2>
+               <h3>ניתן לבחור מילוי אחד</h3>
+               <label for="almondCream">
+                   <input type="radio" id="almondCream" name="sweetFilling" value="קרם שקדים" onchange="pickChoice('Filling')"> קרם שקדים
+               </label>
+               <label for="roseberry">
+                   <input type="radio" id="roseberry" name="sweetFilling" value="קרם פטל" onchange="pickChoice('Filling')"> קרם פטל
+               </label>
+               <label for="patisserieCream">
+                   <input type="radio" id="patisserieCream" name="sweetFilling" value="קרם פטיסייר" onchange="pickChoice('Filling')"> קרם פטיסייר
+               </label>
+               <br/><br/>
+               <div id="pickSweetFilling">
+                   <img src="images/ordersImages/sweetFillingsImages/roseberry.png" id="roseberryImg"/>
+                   <img src="images/ordersImages/sweetFillingsImages/patissierieCream.png" id="patisserieCreamImg"/>
+                   <img src="images/ordersImages/sweetFillingsImages/almondCream.png" id="almondCreamImg"/>
+               </div>
+           </fieldset>
+          
+            <fieldset>
+                <h2>מה מלמעלה?</h2>
+                <h3>תתפרעו - ניתן לבחור כמה תוספות</h3>
+                <label for="coconut">
+                    <input type="checkbox" id="coconut" name="sweetTopping" value="קוקוס ובוטנים" onchange="pickChoice('Topping')"> קוקוס ובוטנים 
+                </label>
+                <label for="chocolateChips">
+                    <input type="checkbox" id="chocolateChips" name="sweetTopping" value="שבבי שוקולד" onchange="pickChoice('Topping')"> שבבי שוקולד 
+                </label>
+                <label for="pistachio">
+                    <input type="checkbox" id="pistachio" name="sweetTopping" value="פיסטוקים ושקדים" onchange="pickChoice('Topping')"> פיסטוקים ושקדים 
+                </label>
+                <div id="pickSweetTopping">
+                    <img src="images/ordersImages/sweetToppingImages/coconutImg.png" id="coconutImg" style="opacity: 0.5; display: inline-block"/>
+                    <img src="images/ordersImages/sweetToppingImages/Chocolate.png" id="chocolateChipsImg" style="opacity: 0.5; display: inline-block"/>
+                    <img src="images/ordersImages/sweetToppingImages/pistachio.png" id="pistachioImg" style="opacity: 0.5; display: inline-block"/>
+                </div>
+            </fieldset>
+        </div>
+        
+        <div id="saltyForm" style="display: none">
+            <fieldset>
+                <h2>מאפה</h2>
+                <h3>ניתן לבחור מאפה אחד בכל הזמנה</h3>
+                <label for="tart">
+                    <input type="radio" id="tart" name="saltyPastry" value="קיש" onchange="pickChoice('Pastry')"> קיש 
+                </label>
+                <label for="pie">
+                    <input type="radio" id="pie" name="saltyPastry" value="פשטידה" onchange="pickChoice('Pastry')"> פשטידה 
+                </label>
+                <label for="borekas">
+                    <input type="radio" id="borekas" name="saltyPastry" value="מאפה עלים" onchange="pickChoice('Pastry')"> מאפה עלים 
+                </label>
+                <div id="pickSaltyPastry">
+                    <img src="images/ordersImages/saltyPastryImages/borekas.png" id="borekasImg"/>
+                    <img src="images/ordersImages/saltyPastryImages/tart.png" id="tartImg"/>
+                    <img src="images/ordersImages/saltyPastryImages/pie.png" id="pieImg"/>
+                </div>
+            </fieldset>
+          
+            <fieldset>
+                <h2>מילוי</h2>
+                <h3>ניתן לבחור מילוי אחד</h3>
+                <label for="ricotta">
+                    <input type="radio" id="ricotta" name="saltyFilling" value="ריקוטה ותרד" onchange="pickChoice('Filling')"> ריקוטה ותרד 
+                </label>
+                <label for="onion">
+                    <input type="radio" id="onion" name="saltyFilling" value="בצל ובטטה" onchange="pickChoice('Filling')"> בצל ובטטה 
+                </label>
+                <label for="potatoes">
+                    <input type="radio" id="potatoes" name="saltyFilling" value="תפוחי אדמה ופטריות" onchange="pickChoice('Filling')"> תפוחי אדמה ופטריות 
+                </label>
+                <div id="pickSaltyFilling">
+                    <img src="images/ordersImages/saltyFillingsImages/ricotta.png" id="ricottaImg"/>
+                    <img src="images/ordersImages/saltyFillingsImages/potatoes.png" id="potatoesImg"/>
+                    <img src="images/ordersImages/saltyFillingsImages/onion.png" id="onionImg"/>
+                </div>
+            </fieldset>
+          
+            <fieldset>
+                <h2>מה מלמעלה?</h2>
+                <h3>תתפרעו - ניתן לבחור כמה תוספות</h3>
+                <label for="sesame">
+                    <input type="checkbox" id="sesame" name="saltyTopping" value="שומשום וקצח" onchange="pickChoice('Topping')"> שומשום וקצח 
+                </label>
+                <label for="parmesan">
+                    <input type="checkbox" id="parmesan" name="saltyTopping" value="פרמז׳ן מגורד" onchange="pickChoice('Topping')"> פרמז׳ן מגורד 
+                </label>
+                <label for="herbs">
+                    <input type="checkbox" id="herbs" name="saltyTopping" value="עשבי תיבול טריים" onchange="pickChoice('Topping')"> עשבי תיבול טריים 
+                </label>
+                <div id="pickSaltyTopping">
+                    <img src="images/ordersImages/saltyToppingImages/sesame.png" id="sesameImg" style="opacity: 0.5; display: inline-block"/>
+                    <img src="images/ordersImages/saltyToppingImages/parmesan.png" id="parmesanImg" style="opacity: 0.5; display: inline-block"/>
+                    <img src="images/ordersImages/saltyToppingImages/herbs.png" id="herbsImg" style="opacity: 0.5; display: inline-block"/>
+                </div>
+            </fieldset>
+         
+        </div>
+        <fieldset>
+                רגע! יש בקשות מיוחדות?<br/><br/>
+                <textarea id="notes" name="message" rows="6" placeholder="כתבו כאן..."></textarea><br/><br/>
+            <button type="button" class="sendBtn" id="submitBtn" disabled onclick="btnClicked()">שליחה</button>
+        </fieldset>
+        <div id="feedback"></div>
+    </form>
+    <div id="popupOverlay" class="popup-overlay" onclick="closeSummary()"></div>
+    
+    <div id="summaryDiv" class="popup">
+        <h2>סיכום ההזמנה שלך</h2>
+        <p><strong>שם:</strong> <span id="sumName"></span></p>
+        <p><strong>מאפה:</strong> <span id="sumPastry"></span></p>
+        <p><strong>מילוי:</strong> <span id="sumFilling"></span></p>
+        <p><strong>תוספות:</strong> <span id="sumToppings"></span></p>
+        <p><strong>בקשות מיוחדות:</strong> <span id="sumNotes"></span></p>
+        <button type="button" class="sendBtn" id="closeBtn" onclick="closeSummary()">
+            סגור
+        </button>
+    </div>
+</main>
+
+
+<footer>
+    <table class="site-footer">
+        <tr>
+            <th>קישורים שימושיים</th>
+            <th>קטגוריות</th>
+            <th>עקבו אחרינו</th>
+        </tr>
+        <tr>
+            <td><a href="index.html">דף הבית</a></td>
+            <td><a href="tips.html">טיפים</a></td>
+            <td><a href="#" class="notActive">פייסבוק</a></td>
+        </tr>
+        <tr>
+            <td><a href="about.html">מי אנחנו</a></td>
+            <td><a href="#" class="notActive">מתכונים</a></td>
+            <td><a href="#" class="notActive">אינסטגרם</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">דברו איתנו</a></td>
+            <td><a href="#" class="notActive">פרויקטים</a></td>
+            <td><a href="#" class="notActive">יוטיוב</a></td>
+        </tr>
+        <tr>
+            <td><a href="orders.html">הזמנות</a></td>
+            <td><a href="#" class="notActive">חנות</a></td>
+            <td><a href="#" class="notActive">טוויטר</a></td>
+        </tr>
+        <tr>
+            <td><a href="siteMap.html">מפת אתר</a></td>
+        </tr>
+    </table>
+</footer>
+</body>
+</html>

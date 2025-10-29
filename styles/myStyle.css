@@ -1,0 +1,682 @@
+﻿body {
+    background-color: #FBF6F0;
+    direction: rtl;
+    font-family: Alef, sans-serif;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+p { margin: 0 0; }
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #e8e4df;
+    border-bottom: 3px solid #f7cccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 120px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-left a,
+.nav-right a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 10px 0; /* חשוב לשמור על רצועה רחבה לריחוף */
+}
+.nav-left a:hover,
+.nav-right a:hover { color: #a67b5b; }
+
+
+.nav-logo {
+    position: absolute;
+    left: 596px;
+    top: 1px;
+}
+.nav-logo img {
+    display: block;
+    height: 90px;
+    width: 90px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 10px 30px;
+    text-align: right;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover { display: block; }
+
+.dropdown-menu li { padding: 6px 15px; }
+.dropdown-menu li a {
+    color: #333333;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-menu li a:hover { background: #f5f5f5; }
+
+.headerDesign {
+    background-color: #14324B;
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+.headerDesign h1 {
+    padding-top: 10px;
+    font-size: 48px;
+    text-align: center;
+    color: #FBF6F0;
+    margin-bottom: 16px;
+    max-width: 600px;
+    border-bottom: 2px solid #f7cccc;
+    display: inline-block;
+}
+.headerDesign p {
+    font-size: 16px;
+    text-align: center;
+    color: #FBF6F0;
+    padding: 20px 250px;
+}
+
+.headerDesignHome {
+    background-color: #14324B;
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+.headerDesignHome h1 {
+    font-size: 68px;
+    text-align: center;
+    color: #FBF6F0;
+    margin-bottom: 16px;
+    max-width: 600px;
+    display: inline-block;
+}
+.headerDesignHome p {
+    font-size: 16px;
+    text-align: center;
+    color: #FBF6F0;
+    padding: 10px 250px;
+    font-weight: 200;
+}
+
+.tipsSection { padding: 16px; }
+
+.tipsSection h2 {
+    color: #432C20;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    border-right: 4px solid #f7cccc;
+    padding-right: 10px;
+}
+
+.tipsSection h3 {
+    font-size: 16px;
+}
+
+.sectionSummery {
+    text-align: center;
+    max-width: 600px;
+    margin: 120px auto;
+    line-height: 1.6;
+    border-top: 2px solid #f7cccc;
+}
+
+ul { list-style: none; padding: 0; }
+ul li {
+    position: relative;
+    margin-bottom: 13px;
+    padding-right: 45px;
+}
+.tipsSection ul li::before {
+    content: "•";
+    position: absolute;
+    right: 20px;
+    color: #14324B;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.main-content {
+    width: 75%;
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fffdfb;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+header img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+header p {
+    text-align: center;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.imgHeadline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 0 40px 0;
+    gap: 10px;
+}
+.imgHeadline div { flex: 1; height: 1px; background-color: #333; }
+.imgHeadline h2 {
+    margin: 0 10px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+.imgRow {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.imgRow div {
+    text-align: center;
+    max-width: 400px;
+}
+.imgRow img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.imgRow p {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #333;
+}
+
+.basicSweets {
+    margin-top: 100px;
+    text-align: right;
+    padding: 40px 20px;
+}
+.basicSweets div {
+    font-size: 87px;
+    font-weight: bold;
+    position: relative;
+    right: 200px;
+}
+.basicSweets div div {
+    font-size: 54px;
+    font-weight: bold;
+    position: relative;
+    right: 90px;
+}
+.basicSweets div div p {
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 1.6;
+    position: relative;
+    left: 180px;
+    color: #444;
+}
+
+.about-sub {
+    font-size: 18px;
+    color: #6b5b53;
+}
+
+.about-timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.about-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: #333;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.about-row {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    min-height: 500px;
+    margin: 120px auto;
+    overflow: hidden;
+}
+.about-row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.about-text, .about-img {
+    width: 500px;
+    align-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-text {
+    float: right;
+    padding: 170px 30px;
+}
+.about-img {
+    float: left;
+    overflow: hidden;
+}
+.about-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.about-text::after, .about-img::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 140px;
+    height: 2px;
+    background-color: #eadfd9;
+    transform: translateY(-50%);
+}
+
+.about-text::after {
+    left: 100%;
+}
+.about-img::after {
+    right: 100%;
+}
+
+.about-row.reverse .about-text {
+    float: left;
+}
+.about-row.reverse .about-img {
+    float: right;
+}
+.about-row.reverse .about-text::after {
+    left: auto;
+    right: 100%;
+}
+.about-row.reverse .about-img::after {
+    right: auto;
+    left: 1280px;
+}
+
+.about-text h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: #14324B;
+}
+.about-text p {
+    margin: 0;
+    line-height: 1.75;
+    font-size: 16px;
+}
+.about-list {
+    margin: 0;
+    padding: 0 18px 0 0;
+    line-height: 1.8;
+    font-size: 16px;
+}
+.about-list li {
+    margin: 6px 0;
+}
+.about-line {
+    width: 1px;
+    background-color: #333; /* אחיד ועמוק יותר */
+    position: absolute;
+    left: 640px;
+}
+.halfLineR {
+    width: 50px;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    top: 250px;
+    right: 640px;
+}
+.halfLineL {
+    width: 50px;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    top: 250px;
+    left: 640px;
+}
+.notActive {
+    cursor: not-allowed;
+    color: gray;
+}
+.breadCrumbs ol li{
+    display: inline-block;
+}
+.breadCrumbs ol li:after {
+    content: " > ";
+    color: #a67b5b;
+}
+.breadCrumbs ol li:last-child:after {
+    content:"";
+}
+.breadCrumbs a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+
+
+table {
+    width: 100%;
+}
+
+
+.site-footer {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #14324B;
+    color: #FBF6F0;
+    font-size: 16px;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.site-footer th {
+    font-size: 26px;
+    color: #FBF6F0;
+    padding: 20px 70px;
+}
+
+.site-footer td {
+    padding: 8px 70px 8px 0;
+    text-align: right;
+}
+
+.site-footer a {
+    color: #FBF6F0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: #f3b375;
+}
+
+.recipe-card{
+    position: relative;
+    width: 1280px;             /* תואם רוחב האתר שלך */
+    margin: 0 auto 60px;
+    min-height: 520px;         /* שיהיה מקום לתמונה מלאה */
+    background: #fff;
+}
+
+.recipe-media{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    background: #eee;
+}
+.recipe-media img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.recipe-content{
+    margin-left: 50%;
+    padding: 36px 48px;
+    box-sizing: border-box;
+    color: #333;
+    text-align: right;
+}
+
+.recipe-content h2{
+    margin: 0 0 12px;
+    font-size: 26px;
+    color: #14324B;
+    border-right: 2px solid #f7cccc;
+    padding-right: 10px;
+}
+.recipe-content .ingredients ul,
+.recipe-content .method ol{
+    margin: 0 0 20px;
+    padding-right: 22px;
+    line-height: 1.75;
+}
+.pill-list{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+.pill{
+    display: inline-block;
+    background: #FBF6F0;
+    border: 1px solid #f1e6df;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 4px 6px 0 0;
+    font-size: 14px;
+}
+.actions a{
+    display: inline-block;
+    margin-left: 10px;
+    color: #14324B;
+    text-decoration: none;
+    border-bottom: 1px solid #14324B;
+}
+.actions a:hover{ color: #7b4f2b; border-color: #7b4f2b; }
+
+.ingredients ul li::before {
+    content: "•";
+    position: absolute;
+    right: 20px;
+    color: #14324B;
+    font-size: 16px;
+    line-height: 1;
+}
+.method ol li{
+    right: 20px;
+}
+
+.siteMapTable {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    direction: rtl;
+}
+
+.siteMapTable a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: block;
+   
+}
+
+.siteMapTable th {
+    padding: 16px;
+    color: #14324B;
+}
+
+.siteMapTable td {
+    vertical-align: top;
+    padding: 16px;
+  }
+  
+.siteMapTable th a {
+    font-size: 16px;     
+    color: #14324B;
+    transition: color 0.3s ease;
+}
+
+
+.siteMapTable th a:hover {
+    color: #B25C2E;          
+    text-decoration: underline; 
+}
+
+.subList {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    
+}
+.hit-logo img {
+    width: 180px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.about-project-sectionSummery {
+   text-align: center;
+    max-width: 600px;
+    margin: 120px auto;
+    line-height: 1.6;
+    border-top: 2px solid #f7cccc;
+}
+
+.about-project-sectionSummery a, p, h3{
+    color: #333;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.about-project-sectionSummery a:hover { 
+    color: #a67b5b; 
+}
+
+fieldset {
+    background-color: #fffdfb;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 50px;
+    margin: 30px 80px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+#orderForm label{
+    display: inline-block;
+    background: #FBF6F0;
+    border: 1px solid #f1e6df;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 4px 10px 0 0;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sendBtn {
+    font-family: Alef, sans-serif;
+    display: inline-block;
+    background: #14324B;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 4px 10px 0 0;
+    font-size: 14px;
+    color: #FBF6F0;
+}
+
+.name {
+        display: block;
+       width: 200px;
+        font-size: 16px;
+        background: #FBF6F0;
+        border: 1px solid #ede8df;
+        border-radius: 12px;
+        padding: 12px 12px;
+        outline: none;
+}
+
+img {
+    display: none;
+}
+
+/* רקע חצי שקוף */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+/* החלונית עצמה */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    z-index: 1001;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    text-align: right;
+    direction: rtl;
+}
+
+/* כפתור סגירה */
+.popup button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #14324B;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.popup button:hover {
+    background-color: #14324B;
+}
