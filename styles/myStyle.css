@@ -616,7 +616,7 @@ fieldset {
     background: #14324B;
     border-radius: 8px;
     padding: 6px 12px;
-    margin: 4px 10px 0 0;
+    margin: 4px 0 0 10px;
     font-size: 14px;
     color: #FBF6F0;
 }
@@ -681,4 +681,5 @@ fieldset {
     background-color: #14324B;
 
 }
+
 
